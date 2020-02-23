@@ -6,7 +6,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
         $(function () {
-            alert('凹')
+            $.ajax({
+				url:'https://www.googleapis.com/youtube/v3/videos?part=snippet,contentDetails&chart=mostPopular&maxResults=3&key=AIzaSyC0aNoURkhyrIg5ebuzhJJSK98fPW_jYBE',
+				type:'Get',
+				dataType:'Json',
+				success:function(json){
+					console.log(json)
+				}
+				
+			});
            });
     </script>
 </head>
